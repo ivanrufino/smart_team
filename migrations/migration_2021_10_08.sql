@@ -1,0 +1,32 @@
+CREATE DATABASE `teste`;
+CREATE TABLE teste.clientes (
+	id INT UNSIGNED auto_increment NOT NULL,
+	nome varchar(100) NULL,
+	cpfcnpj varchar(14) NULL,
+	data_nascimento DATE NULL,
+	endereco varchar(150) NULL,
+	date_created TIMESTAMP  DEFAULT CURRENT_TIMESTAMP NOT NULL,
+	date_updated TIMESTAMP  DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP NOT NULL,
+	deleted BOOL DEFAULT 0 NULL,
+	  PRIMARY KEY (`id`)
+)
+ENGINE=InnoDB
+DEFAULT CHARSET=utf8mb4
+COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE teste.dividas (
+	id INT UNSIGNED auto_increment NOT NULL,
+	id_cliente INT UNSIGNED NOT NULL,
+	descricao varchar(60) NULL,
+	valor DECIMAL(10,2) NULL,
+	data_vencimento DATE NOT NULL,
+	date_created DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL,
+	date_updated DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP NOT NULL,
+	status INT DEFAULT 0 NULL,	
+	deleted BOOL DEFAULT 0 NULL,
+	PRIMARY KEY (id),
+	CONSTRAINT dividas_FK FOREIGN KEY (id_cliente) REFERENCES teste.clientes(id)
+)
+ENGINE=InnoDB
+DEFAULT CHARSET=utf8mb4
+COLLATE=utf8mb4_0900_ai_ci;

@@ -6,3 +6,4 @@
 <br>
 <p>criação das tabelas em migrations/migration_2021_10_08.sql</p
 
+  <p>Alterar senha de conexão em  service/Database.class.php</p>

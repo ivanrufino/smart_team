@@ -7,3 +7,25 @@
 <p>criação das tabelas em migrations/migration_2021_10_08.sql</p
 
   <p>Alterar senha de conexão em  service/Database.class.php</p>
+
+  <h1> Teste api</h1>
+<ul>
+<li>Empresas
+    <ul>
+        <li>GET  api/empresas </li>
+        <li>POST      api/empresas </li>
+        <li>GET  api/empresas/{codigo} </li>
+        <li>PUT       api/empresas/{codigo} </li>
+        <li>DELETE    api/empresas/{codigo}</li>
+    </ul>
+    </li>
+<li>Clientes
+<ul>
+        <li>GET  api/empresas/{codigoEmpresa}/clientes </li>
+        <li>POST      api/empresas/{codigoEmpresa}/clientes </li>
+        <li>GET  api/empresas/{codigoEmpresa}/clientes/{codigoCliente} </li>
+        <li>PUT       api/empresas/{codigoEmpresa}/clientes/{codigoCliente} </li>
+        <li>DELETE    api/empresas/{codigoEmpresa}/clientes/{codigoCliente} </li>
+    </ul>
+    </li>
+</ul>

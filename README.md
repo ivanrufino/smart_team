@@ -29,3 +29,26 @@
     </ul>
     </li>
 </ul>
+<p>
+ <ul>
+        <li>GET  api/empresas </li>
+    </ul>
+    <code>
+Status: 200 OK
+Content-Type: application/json
+
+{
+  "empresas": [
+    {
+      "codigo": 1,
+      "empresa": 123,
+      "sigla": "ABC",
+      "razao_social": "Empresa ABC",
+      "updated_at": "2023-11-23T00:00:00Z",
+      "created_at": "2023-11-23T00:00:00Z"
+    },
+    // ... Outras empresas ...
+  ]
+}
+</code>
+</p>
